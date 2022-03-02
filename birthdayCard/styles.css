@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.container {
+    width: 100%;
+    height: 125vh;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.3)),
+    url(./annie-spratt-M20ylqCzSZw-unsplash.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start; 
+}
+
+.card {
+   
+     
+    width: 360px;
+    height: 560px;
+    
+    position: relative;
+    perspective: 1000;
+
+}
+
+#canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+ 
+
+  #fname{
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+}
+
+#fdob{
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
