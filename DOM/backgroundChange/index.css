@@ -1,0 +1,13 @@
+.firstDiv 
+{
+    background-color: rgb(10,10,228);
+    font-size: small;
+    padding: 200;
+    margin: 50;
+    text-align: center;
+}
+button{
+    background: #08c;
+    text-align: center;
+    color: #ffffff;
+}

@@ -1,0 +1,11 @@
+.p{
+    border-style: solid;
+}
+
+#submit {
+    width: 120px;
+    height: 30px;
+    background: rgb(96,177,218);
+    border-radius: 10px;
+    color: #df0c0c;
+}
