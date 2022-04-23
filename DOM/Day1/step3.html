@@ -1,0 +1,14 @@
+Hello.
+DOM <br>
+what is not the DOM <br>
+1)It's not your HTML <br>
+a)HTML have the errors it automatically corrects the errors <br>
+b) Javascript modify the DOM <br>
+2) It's not what you see in the browser - not the render tree <br>
+3) It's not whats in DevTools
+<script>
+    let newPara = document.createElement('p');
+    newPara.innerHTML = "I'm new txt by JS";
+    let body = document.querySelector('body');
+    body.appendChild(newPara);
+</script>
