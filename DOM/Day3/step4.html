@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Types of Nodes</title>
+        <style>
+            table, th, td {
+            border:1px solid black;
+        }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center; font-family: sans-serif;">Types of Nodes</h1> <br>
+        <table>
+            <tr>
+                <th>S.NO</th>
+                <th>Constant</th>
+                <th>value</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ELEMENT_NODE</td>
+                <td>1</td>
+                <td>Most simple. just an element node like p or h1 tag </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>TEXT_NODE</td>
+                <td>3</td>
+                <td>The actual text</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>CDATA_SECTION_NODE</td>
+                <td>4</td>
+                <td>This is character data that is not parsed by the parser</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>PROCESSING_INSTRUCTION_NODE</td>
+                <td>7</td>
+                <td>Used with XML to embeded application-specific instructions</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>COMMENT_NODE</td>
+                <td>8</td>
+                <td>Pretty obvious it's a comment</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>DOCUMENT_NODE</td>
+                <td>9</td>
+                <td>Simple dimple This is our root document node</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>DOCUMENT_TYPE_NODE</td>
+                <td>10</td>
+                <td>This is so simple. Yep this is our DOCTYPE html declaration</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>DOCUMENT_FRAGMENT_NODE</td>
+                <td>11</td>
+                <td>A DocumentFragment node is lightweight document obvious sometimes you may want to extract a portion of the documnets tree and create a new fragment</td>
+            </tr>
+        </table>
+            <br>
+        <h3>There are only a handful of active (or relevant) node types</h3>
+        <h3>The 4 most common ones we will deal with are:</h3>
+        <ol>
+            <li>Document Node</li>
+            <li>Element Node</li>
+            <li>Text Node</li>
+            <li>Comment Node</li>
+        </ol>
+    </body>
+</html>

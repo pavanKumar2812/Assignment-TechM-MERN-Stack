@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+        h1 {
+            color: rgb(101, 7, 239)
+        }
+        button {
+            cursor: pointer;
+            background-color: black;
+            color: white; 
+            width: 300px;
+            padding: 1em;
+            margin: 0.5em;
+        }
+    </style>
+    <title>DOM Access</title>
+</head>
+
+<body>
+    <h1>Test Yourself</h1>
+    <h2>getElementsByClassName()</h2>
+    <div>
+        <button onclick="green()" class="green undo">Click to change this to green</button>
+        <button onclick="blue()" class="blue undo">Click to change this to blue</button>
+        <button onclick="red()" class="red undo">Click to change this to red</button>
+        <button onclick="undo()" class="undo">Undo</button>
+    </div>
+    <script>
+        function green() {
+            // complete the code within here, using getElementsByClassName
+            let green = document.getElementsByClassName('green')[0];
+            console.log(green)
+            green.style.backgroundColor = 'green';
+            
+        }
+
+        function blue() {
+            // complete the code within here, using getElementsByClassName
+            document.getElementsByClassName('blue')[0].style.backgroundColor = 'blue';
+            
+        }
+
+        function red() {
+            // complete the code within here, using getElementsByClassName
+            document.getElementsByClassName('red')[0].style.backgroundColor = 'red';
+        }
+
+        function undo() {
+            // complete the code within here. Note: this will be different code to the other functions above. 
+            let undo = document.getElementsByClassName('undo');
+
+            for(let i=0;i<undo.length;i++ ) {
+                undo[i].style.backgroundColor = 'black';
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

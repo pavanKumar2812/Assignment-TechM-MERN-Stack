@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Live VS Static</title>
+    </head>
+    <body>
+        <h2>HTMLCollections are  the Live lists</h2>
+        <h2>Nodelists are  the static lists</h2>
+        <p>Lets see the examples <br> <strong>Remember:</strong> HTML Collection always return live collection</p>
+        <ul>
+            <li>Ram</li>
+            <li>lakshman</li>
+            <li>Bharat</li>
+            <li>Shatrughan</li>
+        </ul>
+        <script>
+            // HTML Collections
+
+            // lets access our list items
+            /* let listItems = document.getElementsByTagName('li');
+            console.log(listItems);
+            console.log(listItems.length); */
+
+            // lets modify the DOM and add a list item
+            /* listItems[0].parentNode.appendChild(document.createElement('li'));
+            console.log(listItems);
+            console.log(listItems.length) */
+
+            // Node list 
+
+            // lets grab all of our list tags
+            let listItems = document.querySelectorAll('li');
+            // we can see it return a node list
+            console.log(listItems);
+            console.log(listItems.length);
+
+            // lets add to the list and prove that the Nodelist is static
+            listItems[0].parentNode.appendChild(document.createElement('li'));
+            console.log(listItems);
+            console.log(listItems.length);
+
+            // lets requery the DOM
+            listItems = document.querySelectorAll('li');
+            console.log(listItems);
+            console.log(listItems.length);
+        </script>
+    </body>
+</html>
