@@ -1,0 +1,9 @@
+Children: Elements that are directly nested below another Element
+
+                                    childNodes VS Children
+
+                childNodes                      |         Children
+-> Return a NodeList                            |    -> Returns an HTMLCollection
+-> .childNodes returns all node children        |    -> .children is a property of an Element
+                                                        only Elements have .children
+                                                        these .children are all of type Element

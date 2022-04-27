@@ -1,0 +1,12 @@
+Siblings: Elements that share the same parent
+
+-> Siblings are like brother and sister ... in the same tree level
+-> Siblings do not have to be of the same type (just like your brother or sister)
+-> Nodes higher than a Sibling are ancestors and those below it are descendants
+
+DOM API Property
+
+-> previousSibling
+-> nextSibling
+-> previousElementSibling
+-> nextElementSibling

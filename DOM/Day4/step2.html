@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference between childNodes and children</title>
+    <style>
+        * {
+           border: 2px solid #dedede;
+           padding: 15px;
+           margin: 15px;
+        }
+        body {
+            max-width: 600px;
+            font-family: sans-serif;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Welcome</h1>
+        <!-- This is a comment node -->
+        <div id="wrapper">
+            <h2 class="sub-heading">Traversing the DOM</h2>
+            <p>How do we do it?</p>
+            <p>Stick around, and I'll show you</p>
+        </div>
+        <div id="wrapper-2">
+            <h2 class="wrapper-2">Joke of the day</h2>
+            <p>what do you call fish with no eyes? ... Fsh</p>
+        </div>
+
+        <ul>
+            <li>Item 1</li>
+            <li style="background-color: green;">Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </main>
+    <script>
+        // Task is to change color of first and last of list
+        
+        // access the middle li element
+        let ul = document.getElementsByTagName('ul')[0];
+        console.log(ul);
+        console.log(ul.children); // return HTMLCollection
+
+        let middle = ul.children[1];
+        console.log(middle);
+        
+        // ==============================================================================
+        
+        console.log(middle.previousSibling); // return txt node
+        console.log(middle.previousSibling.previousSibling); // return element node
+
+        // ==============================================================================
+
+        // so we use previousElementSibling
+
+        middle.previousElementSibling.style.backgroundColor = 'pink'
+        middle.nextElementSibling.style.backgroundColor = 'red'
+
+
+
+    </script>
+</body>
+</html>
