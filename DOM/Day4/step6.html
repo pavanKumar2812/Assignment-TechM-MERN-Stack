@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone</title>
+</head>
+<body>
+    <h1>Am I real?</h1>
+    <p class="msg">U need know wt is real and imagination?</p>
+    <script>
+        // lets grab our body element as well as the item we want to clone which is the p element
+        let bodyElement = document.querySelector('body');
+        let paraElement = document.querySelector('.msg');
+
+        // lets define function
+        function sayWhat() {
+            let clonedText = paraElement.cloneNode(true);
+            bodyElement.appendChild(clonedText);
+        }
+
+        // lets use a built in DOM function (from the window object) to execute our sayWhat function every 1 second
+        setInterval(sayWhat,1000)
+    </script>
+</body>
+</html>

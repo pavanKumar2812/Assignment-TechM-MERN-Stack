@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Create Elements</title>
+        <style>
+            body {
+                background-color: pink;
+                padding: 30px;
+            }
+            h1 {
+                font-size: 72px;
+                font-family: sans-serif;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Am i real?</h1>
+        <script>
+            let newlement = document.createElement('p');
+            newlement.textContent = "Or am I a figment of your imagination?"
+            // step1 : lets grab the parent
+            let bodyElement = document.querySelector('body');
+            // step2 : lets now attach out p tag to this body
+            //bodyElement.appendChild(newlement);
+
+            // this time, lets use insertBefore()
+            // 1. lets find the sibling we want to precede
+            let scriptElement = document.querySelector('script');
+            // 2. use the insertBefore method
+            bodyElement.insertBefore(newlement, scriptElement);
+        </script>
+    </body>
+</html>

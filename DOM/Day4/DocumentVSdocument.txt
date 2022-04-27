@@ -1,0 +1,29 @@
+Document vs document
+
+The most common way to create an element is createElement
+
+Where do we find this? -> Document object
+
+step1 : console.log(document) 
+        we've seen that the __proto__ of document is the HTMLDocument
+step2 : console.log(window.document.constructor)
+        we can conclude that the document object is constructed from the HTMLDocument constructor
+step3 : console.log(window.document.nodeType)
+        logs 9, which points to the DOCUMENT_NODE
+
+we know that the HTMLDocument constructor function creates the document
+
+The document is a DOCUMENT_NODE object which inherits from the Document node
+
+Althrough the document node is 'theoretically' the root of the document, it isn't really...
+
+The root of our webpage is the first Element node in the Document, which is ... the html element.
+
+So, we can say that the HTML element is the root (top-level element) of our HTML document
+
+When this HTML file is loaded inour browser, it becomes the document object
+
+And Document is the ultimate node from which our document inherits from 
+
+p.s. both Document and HTMLDocument constructors are instantiated by the browser automatically when you load 
+an HTML document. Typically the use of these methods are associated with providing an HTML document to an iframe

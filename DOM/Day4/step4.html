@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>trick the insertBefore()</title>
+        <style>
+            body {
+                background-color: pink;
+                padding: 30px;
+            }
+            h1 {
+                font-size: 72px;
+                font-family: sans-serif;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Am i real?</h1>
+        <script>
+            let newElement = document.createElement('p');
+            newElement.textContent = "Or am I a figment of your imagination?"
+            // lets grab the body and h1 tag
+            let h1Element = document.querySelector('h1');
+            let bodyElement = document.querySelector('body');
+            // lets trick the insertBefore function
+            let h1NextElement = h1Element.nextElementSibling;
+            bodyElement.insertBefore(newElement, h1Element);
+        </script>
+    </body>
+</html>
