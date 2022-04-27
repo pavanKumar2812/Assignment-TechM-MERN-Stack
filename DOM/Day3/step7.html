@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traverse the DOM</title>
+    <style>
+        * {
+           border: 2px solid #dedede;
+           padding: 15px;
+           margin: 15px;
+        }
+        body {
+            max-width: 600px;
+            font-family: sans-serif;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Welcome</h1>
+        <!-- This is a comment node -->
+        <div id="wrapper">
+            <h2 class="sub-heading">Traversing the DOM</h2>
+            <p>How do we do it?</p>
+            <p>Stick around, and I'll show you</p>
+        </div>
+        <div id="wrapper-2">
+            <h2 class="wrapper-2">Joke of the day</h2>
+            <p>what do you call fish with no eyes? ... Fsh</p>
+        </div>
+    </main>
+    <script>
+        // children
+        let bodyChildren = document.body.children;
+        console.log(bodyChildren);
+        
+        for(let i = 0; i < bodyChildren.length; i++) {
+            let child = bodyChildren[i];
+            child.style.border = '5px solid red';
+        }
+
+        // access h1
+        let h1 = document.getElementsByTagName('h1');
+        console.log(h1) // return HTML Collection
+        console.log(h1[0].children) // return empty HTML collection
+        console.log(h1[0].firstChild) // return "Welcome"
+        console.log(h1[0].lastChild) // return "Welcome"
+        console.log(h1[0].firstElementChild) // return null
+    </script>
+</body>
+</html>
